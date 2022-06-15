@@ -1,6 +1,94 @@
+@font-face {
+    font-family: 'Anurati';
+    src: url('./anurati_font/Anurati-Regular.otf') format('opentype');
+  }
+
+@keyframes colorCycle{
+    0%{
+        border: 3px solid cyan;
+        border-radius: 2em;
+        color: cyan;
+        background-color: black;
+    }
+    100%{
+        border: 3px solid lime;
+        color: lime;
+        border-radius: 3em;
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+body{
+    background: url(https://images6.alphacoders.com/715/715830.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
 .navbar{
     display: flex;
     justify-content: space-around;
     width: 40%;
+    background-color: black;
+    font-family: 'Anurati',monospace;
     margin:0 auto;
+    animation-name: colorCycle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#selected{
+    color:red;
+}
+.sideBox{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    flex:3;
+}
+.mainBox{
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Anurati',monospace;
+    justify-content: space-between;
+    animation-name: colorCycle;
+    animation-duration: 10s;
+    min-width: 60em;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+img{
+    flex:1;
+    max-width: 25rem;
+}
+.text{
+    font-size: 1.5em;
+    margin: 1.2em;
+}
+.shopBBox{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Anurati',monospace;
+    margin: 3em;
+    align-items: center;
+    animation-name: colorCycle;
+    justify-content: space-between;
+    gap:12em;
+    animation-duration: 10s;
+    min-width: 60em;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.shop1Box{
+    display: flex;
+    align-items: flex-start;
+    gap:12em;
+    width: 60%;
+    font-size: 1em;
+
+}
+.titleSmall{
+    font-size: 2em;
+}
+.sidediv{
+    margin:2em;
+    font-size: 2em;
 }
